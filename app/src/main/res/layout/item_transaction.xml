@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="8dp"
+    android:background="@drawable/bg_rpg_card"
+    android:gravity="center_vertical"
+    android:orientation="horizontal"
+    android:padding="12dp">
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/tv_trans_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Makan Siang &amp; Kopi"
+            android:textColor="@color/rpg_text_primary"
+            android:textSize="14sp"
+            android:textStyle="bold" />
+
+        <!-- CATEGORY & DATE -->
+        <TextView
+            android:id="@+id/tv_trans_category_date"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="2dp"
+            android:text="Makanan • 24 Mei 2025"
+            android:textColor="@color/rpg_text_secondary"
+            android:textSize="11sp" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tv_trans_amount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:text="- Rp 35.000"
+        android:textColor="@color/rpg_hp_red"
+        android:textSize="14sp"
+        android:textStyle="bold" />
+
+    <ImageButton
+        android:id="@+id/btn_edit_trans"
+        android:layout_width="32dp"
+        android:layout_height="32dp"
+        android:background="?attr/selectableItemBackgroundBorderless"
+        android:contentDescription="Edit"
+        android:src="@android:drawable/ic_menu_edit"
+        app:tint="@color/rpg_cyan" />
+
+    <ImageButton
+        android:id="@+id/btn_delete_trans"
+        android:layout_width="32dp"
+        android:layout_height="32dp"
+        android:background="?attr/selectableItemBackgroundBorderless"
+        android:contentDescription="Hapus"
+        android:src="@android:drawable/ic_menu_delete"
+        app:tint="@color/rpg_text_secondary" />
+
+</LinearLayout>

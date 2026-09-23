@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/rpg_bg_dark"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <!-- CALENDAR CARD HEADER -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bg_rpg_header"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="📅 KALENDER JADWAL QUEST"
+                android:textColor="@color/rpg_gold"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="2dp"
+                android:text="Pilih tanggal untuk melihat dan mengatur jadwal quest harian."
+                android:textColor="@color/rpg_text_secondary"
+                android:textSize="12sp" />
+
+            <CalendarView
+                android:id="@+id/calendar_view"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:background="@drawable/bg_rpg_card"
+                android:dateTextAppearance="@style/TextAppearance.AppCompat.Medium"
+                android:focusedMonthDateColor="@color/rpg_text_primary"
+                android:unfocusedMonthDateColor="@color/rpg_text_secondary" />
+        </LinearLayout>
+
+        <!-- DATE SUMMARY & ADD QUEST BUTTON -->
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp">
+
+            <TextView
+                android:id="@+id/tv_selected_date_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_centerVertical="true"
+                android:text="Quest Hari Ini"
+                android:textColor="@color/rpg_text_primary"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btn_add_quest_for_date"
+                style="@style/Widget.Material3.Button.OutlinedButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:text="+ Quest Tanggal Ini"
+                android:textColor="@color/rpg_gold"
+                android:textSize="12sp"
+                app:strokeColor="@color/rpg_gold" />
+        </RelativeLayout>
+
+        <!-- QUEST RECYCLERVIEW FOR SELECTED DATE -->
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rv_calendar_quests"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:nestedScrollingEnabled="false"
+            tools:listitem="@layout/item_quest" />
+
+        <TextView
+            android:id="@+id/tv_empty_calendar_quests"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:gravity="center"
+            android:text="Tidak ada quest terjadwal untuk tanggal ini."
+            android:textColor="@color/rpg_text_secondary"
+            android:textSize="14sp"
+            android:visibility="gone" />
+
+    </LinearLayout>
+
+</androidx.core.widget.NestedScrollView>

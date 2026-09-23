@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/nav_quests"
+        android:icon="@drawable/ic_quest"
+        android:title="@string/title_quests" />
+    <item
+        android:id="@+id/nav_specialization"
+        android:icon="@drawable/ic_specialization"
+        android:title="@string/title_specialization" />
+    <item
+        android:id="@+id/nav_calendar"
+        android:icon="@drawable/ic_calendar"
+        android:title="@string/title_calendar" />
+    <item
+        android:id="@+id/nav_financial"
+        android:icon="@drawable/ic_gold"
+        android:title="@string/title_financial" />
+    <item
+        android:id="@+id/nav_shop"
+        android:icon="@drawable/ic_shop"
+        android:title="@string/title_shop" />
+</menu>

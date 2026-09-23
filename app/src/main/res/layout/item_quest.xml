@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/card_quest_root"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="12dp"
+    android:background="@drawable/bg_rpg_card"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <!-- TOP ROW: DIFFICULTY TAG & REWARDS -->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/tv_quest_difficulty"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:background="@drawable/bg_rpg_card"
+            android:paddingHorizontal="8dp"
+            android:paddingVertical="3dp"
+            android:text="Medium (C)"
+            android:textColor="@color/diff_medium"
+            android:textSize="11sp"
+            android:textStyle="bold" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/tv_quest_reward_exp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="6dp"
+                android:text="+50 EXP"
+                android:textColor="@color/rpg_exp_light"
+                android:textSize="12sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tv_quest_reward_gold"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="+25 Gold"
+                android:textColor="@color/rpg_gold"
+                android:textSize="12sp"
+                android:textStyle="bold" />
+        </LinearLayout>
+    </RelativeLayout>
+
+    <!-- QUEST TITLE & DESCRIPTION -->
+    <TextView
+        android:id="@+id/tv_quest_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="Belajar Matematika &amp; Logika"
+        android:textColor="@color/rpg_text_primary"
+        android:textSize="16sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/tv_quest_description"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:text="Selesaikan latihan aljabar dan rumus trigonometri."
+        android:textColor="@color/rpg_text_secondary"
+        android:textSize="13sp" />
+
+    <!-- TAGS ROW (SPECIALIZATION & TIMER REQ) -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/tv_quest_specialization"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="8dp"
+            android:background="#223498DB"
+            android:paddingHorizontal="8dp"
+            android:paddingVertical="3dp"
+            android:text="📚 Matematika"
+            android:textColor="@color/rpg_cyan"
+            android:textSize="11sp" />
+
+        <TextView
+            android:id="@+id/tv_quest_timer_req"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="⏱️ 30 Mnt"
+            android:textColor="@color/rpg_text_secondary"
+            android:textSize="11sp" />
+    </LinearLayout>
+
+    <!-- ACTION BUTTONS ROW -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btn_start_timer"
+            style="@style/Widget.Material3.Button.OutlinedButton"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="6dp"
+            android:layout_weight="1"
+            android:text="Focus Timer"
+            android:textColor="@color/rpg_cyan"
+            android:textSize="12sp"
+            app:strokeColor="@color/rpg_cyan" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btn_complete_quest"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="6dp"
+            android:layout_weight="1"
+            android:backgroundTint="@color/rpg_hp_green"
+            android:text="Selesai"
+            android:textColor="@color/black"
+            android:textSize="12sp"
+            android:textStyle="bold" />
+
+        <ImageButton
+            android:id="@+id/btn_delete_quest"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:contentDescription="Hapus"
+            android:src="@android:drawable/ic_menu_delete"
+            app:tint="@color/rpg_text_secondary" />
+    </LinearLayout>
+
+</LinearLayout>

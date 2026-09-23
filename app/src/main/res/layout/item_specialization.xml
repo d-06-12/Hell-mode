@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="12dp"
+    android:background="@drawable/bg_rpg_card"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <!-- TOP ROW: TITLE & LEVEL BADGE & EDIT/DELETE BUTTONS -->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_toStartOf="@id/layout_spec_actions"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <View
+                android:id="@+id/view_spec_color_indicator"
+                android:layout_width="12dp"
+                android:layout_height="12dp"
+                android:layout_marginEnd="8dp"
+                android:background="#3498DB" />
+
+            <TextView
+                android:id="@+id/tv_spec_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Matematika &amp; Logika"
+                android:textColor="@color/rpg_text_primary"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/layout_spec_actions"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/tv_spec_level"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="6dp"
+                android:background="@drawable/bg_rpg_card"
+                android:paddingHorizontal="8dp"
+                android:paddingVertical="3dp"
+                android:text="Level 1"
+                android:textColor="@color/rpg_gold"
+                android:textSize="11sp"
+                android:textStyle="bold" />
+
+            <ImageButton
+                android:id="@+id/btn_edit_spec"
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:contentDescription="Edit"
+                android:src="@android:drawable/ic_menu_edit"
+                app:tint="@color/rpg_cyan" />
+
+            <ImageButton
+                android:id="@+id/btn_delete_spec"
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:contentDescription="Hapus"
+                android:src="@android:drawable/ic_menu_delete"
+                app:tint="@color/rpg_text_secondary" />
+        </LinearLayout>
+    </RelativeLayout>
+
+    <!-- STATS ROW: CATEGORY & TOTAL TIME -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/tv_spec_category"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="16dp"
+            android:text="Kategori: Akademik"
+            android:textColor="@color/rpg_text_secondary"
+            android:textSize="12sp" />
+
+        <TextView
+            android:id="@+id/tv_spec_time_studied"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Total Fokus: 2j 30m"
+            android:textColor="@color/rpg_cyan"
+            android:textSize="12sp" />
+    </LinearLayout>
+
+    <!-- EXP PROGRESS BAR -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="EXP Spesialisasi"
+                android:textColor="@color/rpg_text_secondary"
+                android:textSize="11sp" />
+
+            <TextView
+                android:id="@+id/tv_spec_exp_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:text="45 / 100 EXP"
+                android:textColor="@color/rpg_exp_light"
+                android:textSize="11sp"
+                android:textStyle="bold" />
+        </RelativeLayout>
+
+        <ProgressBar
+            android:id="@+id/progress_spec_exp"
+            style="?android:attr/progressBarStyleHorizontal"
+            android:layout_width="match_parent"
+            android:layout_height="6dp"
+            android:layout_marginTop="4dp"
+            android:max="100"
+            android:progress="45"
+            android:progressDrawable="@drawable/bg_button_gold" />
+    </LinearLayout>
+
+</LinearLayout>

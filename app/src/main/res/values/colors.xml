@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+
+    <!-- MMORPG Dark Theme Base -->
+    <color name="rpg_bg_dark">#12131A</color>
+    <color name="rpg_card_bg">#1E202C</color>
+    <color name="rpg_card_stroke">#2D3245</color>
+    <color name="rpg_card_selected">#2A2E40</color>
+
+    <!-- Accent Colors -->
+    <color name="rpg_gold">#FFC107</color>
+    <color name="rpg_gold_light">#FFE082</color>
+    <color name="rpg_gold_dark">#FFA000</color>
+
+    <color name="rpg_exp">#7C4DFF</color>
+    <color name="rpg_exp_light">#B388FF</color>
+
+    <color name="rpg_hp_green">#2ECC71</color>
+    <color name="rpg_hp_red">#E74C3C</color>
+
+    <color name="rpg_cyan">#00E5FF</color>
+    <color name="rpg_text_primary">#F0F2F5</color>
+    <color name="rpg_text_secondary">#9DA3B4</color>
+
+    <!-- Hell Mode Fiery Colors -->
+    <color name="hell_red">#FF2A2A</color>
+    <color name="hell_bg_dark">#150505</color>
+    <color name="hell_card_bg">#2A0E0E</color>
+    <color name="hell_card_stroke">#4A1515</color>
+    <color name="hell_orange">#FF6D00</color>
+    <color name="hell_crimson">#B71C1C</color>
+
+    <!-- Difficulty Tags -->
+    <color name="diff_easy">#2ECC71</color>
+    <color name="diff_medium">#3498DB</color>
+    <color name="diff_hard">#9B59B6</color>
+    <color name="diff_hell">#E74C3C</color>
+</resources>

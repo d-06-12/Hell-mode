@@ -1,0 +1,13 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Base.Theme.Hell_mode" parent="Theme.Material3.Dark.NoActionBar">
+        <item name="colorPrimary">@color/rpg_gold</item>
+        <item name="colorOnPrimary">@color/black</item>
+        <item name="colorSecondary">@color/rpg_cyan</item>
+        <item name="colorOnSecondary">@color/black</item>
+        <item name="android:statusBarColor">@color/rpg_bg_dark</item>
+        <item name="android:windowBackground">@color/rpg_bg_dark</item>
+    </style>
+
+    <style name="Theme.Hell_mode" parent="Base.Theme.Hell_mode" />
+</resources>

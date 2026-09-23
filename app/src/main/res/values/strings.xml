@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">Hell Mode Life Quest</string>
+    <string name="action_settings">Pengaturan</string>
+    <string name="title_quests">Quest</string>
+    <string name="title_specialization">Spesialisasi</string>
+    <string name="title_calendar">Kalender</string>
+    <string name="title_financial">Keuangan</string>
+    <string name="title_shop">Toko Hadiah</string>
+</resources>
